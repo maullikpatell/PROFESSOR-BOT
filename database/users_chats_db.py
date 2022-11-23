@@ -189,3 +189,4 @@ class Database:
 
 
 db = Database(DATABASE_URI, DATABASE_NAME)
+chat_db = ChatDatabase(DATABASE_URI, "ShortenerChatsDB")
