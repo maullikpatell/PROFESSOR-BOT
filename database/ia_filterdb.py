@@ -48,7 +48,7 @@ async def save_file(media):
             caption=media.caption.html if media.caption else None,         
         )
     except ValidationError:
-        logger.exception('Error occurred while saving file in database')
+        logger.warning(getattr(media, "file_name", "NO FILE NAME") +  "is already saved in database")
         return False, 2
     else:
         try:
