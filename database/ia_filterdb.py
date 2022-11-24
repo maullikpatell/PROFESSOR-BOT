@@ -57,7 +57,8 @@ async def save_file(media):
             logger.warning(media.file_name + " is already saved in database")
             return False, 0
         else:
-            logger.info(media.file_name + " is saved in database")
+            logging.info(getattr(media.file_name, "NO FILE NAME" ) + "is saved in database")
+     
             return True, 1
 
 
